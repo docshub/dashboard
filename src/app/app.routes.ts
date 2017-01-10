@@ -5,11 +5,14 @@ import { NoContentComponent } from './no-content';
 
 import { DataResolver } from './app.resolver';
 
+import { NgbdAccordionBasicComponent } from './bootstrap';
+
 export const ROUTES: Routes = [
-  { path: '',      component: HomeComponent },
-  { path: 'home',  component: HomeComponent },
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'detail', loadChildren: './+detail#DetailModule'},
-  { path: 'barrel', loadChildren: './+barrel#BarrelModule'},
-  { path: '**',    component: NoContentComponent },
+  { path: 'bootstrap', component: NgbdAccordionBasicComponent },
+  { path: 'detail', loadChildren: './+detail#DetailModule' },
+  { path: 'barrel', loadChildren: './+barrel#BarrelModule' },
+  { path: '**', component: NoContentComponent },
 ];

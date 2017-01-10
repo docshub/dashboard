@@ -28,6 +28,8 @@ import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
+import { NgbdAccordionBasicComponent } from './bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -54,10 +56,12 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     NoContentComponent,
+    NgbdAccordionBasicComponent,
     XLargeDirective
   ],
   imports: [ // import Angular's modules
     BrowserModule,
+    NgbModule.forRoot() ,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
